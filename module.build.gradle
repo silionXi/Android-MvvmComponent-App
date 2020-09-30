@@ -23,6 +23,7 @@ android {
             }
         }
 
+        multiDexEnabled true
     }
     buildTypes {
         debug {
@@ -60,6 +61,10 @@ android {
     compileOptions {
         sourceCompatibility = javaVersion
         targetCompatibility = javaVersion
+    }
+
+    dependencies {
+        implementation androidx.multidex
     }
 }
 
