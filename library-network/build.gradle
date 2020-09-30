@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion androidVer.compileSdkVersion
+    buildToolsVersion androidVer.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        minSdkVersion androidVer.minSdkVersion
+        targetSdkVersion androidVer.targetSdkVersion
         versionCode 4
         versionName "2.1.6"
         consumerProguardFiles 'consumer-rules.pro'
@@ -22,7 +22,7 @@ android {
     sourceSets {
         main {
 //            jniLibs.srcDirs = ['libs']
-            if (isBuildModule.toBoolean()) {
+            if (!isBuildAll) {
             } else {
                 resources {
                     //正式版本时，排除debug文件夹下所有调试文件

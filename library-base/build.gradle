@@ -1,19 +1,19 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion androidVer.compileSdkVersion
+    buildToolsVersion androidVer.buildToolsVersion
     defaultConfig {
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode rootProject.ext.android.versionCode
-        versionName rootProject.ext.android.versionName
+        minSdkVersion androidVer.minSdkVersion
+        targetSdkVersion androidVer.targetSdkVersion
+        versionCode androidVer.versionCode
+        versionName androidVer.versionName
         consumerProguardFiles 'consumer-rules.pro'
     }
     sourceSets {
         main {
 //            jniLibs.srcDirs = ['libs']
-            if (isBuildModule.toBoolean()) {
+            if (!isBuildAll) {
             } else {
                 resources {
                     //正式版本时，排除debug文件夹下所有调试文件
@@ -46,14 +46,14 @@ android {
 }
 
 dependencies {
-    api rootProject.ext.androidx["androidx-appcompat"]
-    api rootProject.ext.androidx["androidx.lifecycle"]
-    api rootProject.ext.androidx["androidx.recyclerview"]
-    api rootProject.ext.androidx["androidx.constraintlayout"]
-    api rootProject.ext.androidx["androidx.cardview"]
-    api rootProject.ext.androidx["android.material"]
-    api rootProject.ext.androidx["androidx.navigation-fragment"]
-    api rootProject.ext.androidx["androidx.navigation-ui:"]
+    api rootProject.ext.androidx["appcompat"]
+    api rootProject.ext.androidx["lifecycle"]
+    api rootProject.ext.androidx["recyclerview"]
+    api rootProject.ext.androidx["constraintlayout"]
+    api rootProject.ext.androidx["cardview"]
+    api rootProject.ext.androidx["navigation-fragment"]
+    api rootProject.ext.androidx["navigation-ui:"]
+    api rootProject.ext.dependencies["android.material"]
     api rootProject.ext.dependencies["loadsir"]
     api rootProject.ext.dependencies["gson"]
     api rootProject.ext.dependencies["rxjava2"]

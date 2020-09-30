@@ -1,7 +1,7 @@
 apply from: "../module.build.gradle"
 android {
     defaultConfig {
-        if (isBuildModule.toBoolean()){
+        if (!isBuildAll){
             applicationId "com.drz.community"
         }
     }
@@ -10,9 +10,9 @@ android {
 }
 
 dependencies {
-    testImplementation rootProject.ext.androidx["junit"]
-    androidTestImplementation rootProject.ext.androidx["androidx.test.ext-junit"]
-    androidTestImplementation rootProject.ext.androidx["androidx.test.espresso:espresso-core"]
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.androidx["test.ext-junit"]
+    androidTestImplementation rootProject.ext.androidx["test.espresso:espresso-core"]
     //组件中依赖阿里路由编译框架
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
     annotationProcessor rootProject.ext.dependencies["glide-compiler"]

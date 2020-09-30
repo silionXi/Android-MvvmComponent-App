@@ -1,0 +1,12 @@
+*.iml
+.gradle
+/local.properties
+.idea
+.DS_Store
+/build
+/gradle
+/gradlew
+/gradlew.bat
+/captures
+/okhttp-3.7.0-sources
+.externalNativeBuild

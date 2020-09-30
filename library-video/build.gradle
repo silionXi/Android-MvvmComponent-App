@@ -1,20 +1,20 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion androidVer.compileSdkVersion
+    buildToolsVersion androidVer.buildToolsVersion
     defaultConfig {
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode rootProject.ext.android.versionCode
-        versionName rootProject.ext.android.versionName
+        minSdkVersion androidVer.minSdkVersion
+        targetSdkVersion androidVer.targetSdkVersion
+        versionCode androidVer.versionCode
+        versionName androidVer.versionName
         consumerProguardFiles 'consumer-rules.pro'
     }
 
     sourceSets {
         main {
 //            jniLibs.srcDirs = ['libs']
-            if (isBuildModule.toBoolean()) {
+            if (!isBuildAll) {
             } else {
                 resources {
                     //正式版本时，排除debug文件夹下所有调试文件
@@ -46,7 +46,7 @@ android {
 }
 
 dependencies {
-    api rootProject.ext.androidx["androidx.recyclerview"]
+    api rootProject.ext.androidx["recyclerview"]
     api rootProject.ext.dependencies["glide"]
     annotationProcessor rootProject.ext.dependencies["glide-compiler"]
     //GSYVideoPlayer

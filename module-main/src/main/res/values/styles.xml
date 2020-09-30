@@ -1,6 +1,17 @@
 <resources>
+
+    <!-- Base application theme. -->
+    <style name="mvvm_main_AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/common_colorBlacklight</item>
+        <item name="colorPrimaryDark">@color/common_colorBlacklight</item>
+        <item name="colorAccent">@color/common_color_blue</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
     <!--StartActivity Style 冷启动效果-->
-    <style name="AppTheme.Start" >
+    <style name="mvvm_main_AppTheme.Start" >
         <item name="android:windowBackground">@drawable/main_splash_start</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
