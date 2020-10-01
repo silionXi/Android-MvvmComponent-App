@@ -32,6 +32,10 @@ android {
 
     //统一资源前缀,规范资源引用
     resourcePrefix "common_"
+    //开启dataBinding
+    dataBinding{
+        enabled true
+    }
 
     dataBinding {
         enabled true
@@ -45,6 +49,7 @@ android {
 }
 
 dependencies {
+    api project(':slibrary')
     api project(':library-base')
     api project(':library-network')
     api project(':library-servicemanager')

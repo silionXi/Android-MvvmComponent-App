@@ -1,6 +1,7 @@
 package com.drz.common;
 
-import com.drz.base.base.BaseApplication;
+
+import com.silion.slibrary.global.BaseApplication;
 
 /**
  * 应用模块: base

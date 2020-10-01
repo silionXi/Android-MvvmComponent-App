@@ -1,7 +1,6 @@
 package com.drz.main.application;
 
 import com.blankj.utilcode.util.Utils;
-import com.drz.base.base.BaseApplication;
 import com.drz.base.loadsir.EmptyCallback;
 import com.drz.base.loadsir.ErrorCallback;
 import com.drz.base.loadsir.LoadingCallback;
@@ -11,6 +10,7 @@ import com.drz.common.adapter.ScreenAutoAdapter;
 import com.kingja.loadsir.core.LoadSir;
 import com.limpoxe.support.servicemanager.ServiceManager;
 import com.orhanobut.logger.Logger;
+import com.silion.slibrary.global.BaseApplication;
 import com.zhouyou.http.EasyHttp;
 import com.zhouyou.http.cache.converter.GsonDiskConverter;
 import com.zhouyou.http.cache.model.CacheMode;

@@ -2,8 +2,8 @@ package com.drz.common.config;
 
 import androidx.annotation.Nullable;
 
-import com.drz.base.base.BaseApplication;
 import com.drz.common.IModuleInit;
+import com.silion.slibrary.global.BaseApplication;
 
 /**
  * 应用模块: common
