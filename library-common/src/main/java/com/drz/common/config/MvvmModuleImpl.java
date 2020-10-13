@@ -17,6 +17,7 @@ public class MvvmModuleImpl extends BaseModuleImpl {
 
     @Override
     public void onInitFirst(BaseApplication application) {
+        super.onInitFirst(application);
         ModuleLifecycleConfig.getInstance().initModuleAhead(getApplication());
     }
 }
